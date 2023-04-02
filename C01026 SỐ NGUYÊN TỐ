@@ -32,3 +32,40 @@ int main()
 {
 	gia_tri();
 }
+
+
+
+
+
+//VIẾT THEO MAIN
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	int test;
+	scanf("%d", &test);
+	while (test--)
+	{
+		int n;
+		scanf("%d", &n);
+		if(n<2)
+		{
+			printf("NO\n");
+		}
+		int check=0;
+		for(int i=2;i<=sqrt(n);i++)
+		{
+			if(n%i==0)
+			{
+				check=1;
+				printf("NO\n");
+				break;
+			}
+		}
+		if(check==0)
+		{
+			printf("YES\n");
+		}
+		
+	}
+}
