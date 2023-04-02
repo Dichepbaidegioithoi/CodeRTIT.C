@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	int a;
+	scanf("%d", &a);
+	int k=1;
+while (a>0)
+	{
+		int i=a%10;
+		a=a/10;
+		k=k*i;
+	}
+	printf("%d",k);
+	return 0;
+}
