@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<math.h>
+#include<string.h>
+int giai_thua(int n)
+{
+    if(n == 0)  return 1;
+    else
+        return  n * giai_thua(n - 1);
+}
+int main()
+{
+    char a[7];  scanf("%s", &a);
+    long long sum = 0;
+    for(int i = 0; i < strlen(a); i++)
+        sum += giai_thua(a[i] - '0');
+
+    if(sum == atoi(a))  printf("1");
+    else                printf("0");
+    return 0;
+}
