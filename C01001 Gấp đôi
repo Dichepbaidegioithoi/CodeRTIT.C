@@ -1,0 +1,12 @@
+//Bài này mới lần đầu vào codeptit sẽ auto bị ngu vì mình tưởng nhập 2 số -.- xong cứ code đi rồi sẽ biết codeptit nó chạy khôn như thế nào
+//Nếu có bài chạy quá 10 lần vẫn WA thì thực sự chỉ muốn đi chép hết tất cả bài :>>
+#include <stdio.h>
+int main()
+{
+	int a,b ;
+	scanf("%d", &a);
+	b=2*a;
+	printf("%d",b);
+	return 0;
+}
+//mới code nên code dài and ngu vc :<
