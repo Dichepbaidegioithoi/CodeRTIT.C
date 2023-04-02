@@ -1,0 +1,36 @@
+
+#include <stdio.h>
+ #include <string.h>
+ #include <stdlib.h>
+ #include <ctype.h>
+ #include <math.h>
+ int max1(int n,int m){
+ 	return n>m?n:m;
+ }
+int main(){
+	int n;
+	int m;
+	scanf("%d %d",&n,&m);
+	char x=max1(n,m)+96;
+	char a[50][50];
+	int h1=0;
+	int c1=0;
+	while(h1<n && c1<m){
+	for(int i=c1;i<m;i++){
+		a[h1][i]=x;
+	}
+h1++;
+	for(int i=h1;i<n;i++){
+		a[i][c1]=x;
+	}
+	c1++;
+	x--;
+}
+for(int i=0;i<n;i++){
+	for(int j=0;j<m;j++){
+		printf("%c",a[i][j]);
+	}
+	printf("\n");
+}
+return 0;
+}
