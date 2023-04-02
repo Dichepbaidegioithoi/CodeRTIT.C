@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	int a;
+	scanf("%d", &a);
+	if (a>0 && a<1000)
+	{
+		int b=a/365;   //vì 1 năm chỉ có 365 ngày á -.- nên phải chia để tìm b số năm
+		printf("%d",b);
+		int c=(a-b*365)/7;     // số tuần dư sẽ bằng (số ngày trừ đi số ngày của b năm )/7
+		printf(" %d",c);
+		int d=a-c*7-b*365;
+		printf(" %d",d);
+	}
+	return 0;
+}
