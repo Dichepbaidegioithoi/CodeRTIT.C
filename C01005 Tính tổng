@@ -1,0 +1,11 @@
+//dành cho những bạn mới code mà chưa học cái gì như mình
+#include <stdio.h>
+#include <math.h>
+	int main(){
+int a, b;
+scanf("%d %d", &a , &b);
+int tong = a + b;
+printf("%d",tong);
+return 0;
+}	
+//code kiểu nguyên thủy qá :<
