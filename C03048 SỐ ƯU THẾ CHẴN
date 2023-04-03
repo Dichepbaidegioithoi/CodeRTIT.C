@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	int test;
+	scanf("%d", &test);
+	while(test--)
+	{
+		int demch=0;
+		int demle=0;
+		long long a;
+		scanf("%lld", &a);
+		while(a>0)
+		{if((a%10)%2==0)
+		demch++;
+		else
+		{demle++;
+		}
+		a/=10;
+	}
+	if(demch>demle)
+	{
+		printf("YES\n");
+	}else
+	{
+		printf("NO\n");
+	}
+}
+	return 0;
+}
