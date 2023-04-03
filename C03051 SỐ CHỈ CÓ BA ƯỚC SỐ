@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <math.h>
+int checkPrime(int m)
+{
+	if(m<2)    return 0;
+	for(int i=2;i<=sqrt(m);i++)
+	{
+		if(m%i==0)   return 0;
+	}
+	return 1;
+}
+int main()
+{
+	int test;
+	scanf("%d",&test);
+	while(test--)
+	{
+		long long a,b;
+		scanf("%lld%lld", &a,&b);
+		int count=0;
+		for(long long i=a;i*i<=b;i++)
+		{
+			if(checkPrime(i))
+			{
+				count++;
+			}
+		}
+		printf("%d\n",count);
+	}
+	return 0;
+}
