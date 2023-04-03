@@ -1,0 +1,18 @@
+//BÀI NÀY LÀ MÌNH LẦN ĐẦU DẠI TRAI -.- ĐI THUÊ VIẾT -.- NGHĨ LẠI VẪN NHỤC MẶT VÃI Ò :<
+#include<stdio.h>
+#define prin(a,b) 
+printf("(%d,%d)\n",a,b);
+int ucln(int a,int b)
+{
+	if(a%b==0) return b;
+	return ucln(b,a%b);
+}
+int main()
+{
+	int a,b,i,j;
+	scanf("%d %d",&a,&b);
+	for(i=a;i<=b;i++)
+    	for(j=i+1;j<=b;j++)
+		 if(ucln(i,j)==1)
+				prin(i,j)
+}
