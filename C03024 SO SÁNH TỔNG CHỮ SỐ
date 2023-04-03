@@ -1,0 +1,24 @@
+#include <stdio.h>
+int tong1(int n)
+{
+	int tong=0;
+	while(n>0)
+	{
+		tong+=n%10;
+		n/=10;
+	}
+	return tong;
+}
+int main()
+{
+	int n,m;
+	scanf("%d %d", &n, &m);
+	if(tong1(n)<=tong1(m))
+	{
+		printf("%d %d",n,m);
+	}else
+	{
+		printf("%d %d",m,n);
+	}
+	return 0;
+}
