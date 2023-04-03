@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int n, i, j, flag;
+    scanf("%d", &n);
+    int number = 2;
+    int count = 0;
+
+    while (count < n)
+    {
+        if (isprime(number))
+        {
+            printf("%d\n", number);
+            count++;
+        }
+        number++;
+    }
+
+    return 0;
+}
+
+int isprime(int thenumber)
+{
+    int isitprime = 1, loop;
+    if (thenumber == 2)
+        return 1;
+    else if (thenumber % 2 == 0)
+        return 0;
+    else
+    {
+        for (loop = 3; loop <= sqrt(thenumber); loop += 2)
+            if (thenumber % loop == 0)
+                return 0;
+        return 1;
+    }
+}
