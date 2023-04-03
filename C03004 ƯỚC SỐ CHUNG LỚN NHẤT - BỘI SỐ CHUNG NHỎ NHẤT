@@ -1,0 +1,25 @@
+#include <stdio.h>
+ #include <string.h>
+ #include <stdlib.h>
+ #include <ctype.h>
+ #include <math.h>
+long long check(long long a,long long b){
+	while(a!=b){
+		if(a>b){
+			a=a-b;
+		}
+		else{
+			b=b-a;
+		}
+	}
+	return a;
+}
+int main(){
+	long long a;
+	long long b;
+	scanf("%lld%lld",&a,&b);
+	long long x=a*b;
+	printf("%lld\n",check(a,b));
+	printf("%lld",x/check(a,b));
+	return 0;
+}
