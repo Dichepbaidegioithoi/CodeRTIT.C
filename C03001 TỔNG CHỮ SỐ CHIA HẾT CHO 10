@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	int test;
+	scanf("%d", &test);
+	while (test--)
+	{
+		int n;
+		scanf("%d", &n);
+		int s=0;
+		while (n>0)
+		{
+			int a=n%10;
+			s=s+a;
+			n=n/10;
+		}
+		if(s%10==0)
+		{
+			printf("YES\n");
+		}else
+		{
+			printf("NO\n");
+		}
+	}
+	return 0;
+}
