@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	int test;
+	scanf("%d",&test);
+	while(test--)
+	{
+		long long n;
+		scanf("%lld", &n);
+		int i=1;
+		int demch=0;
+		int demle=0;
+		while(n>0)
+		{
+		if((n%10)%2==0)
+		{
+			demch++;
+		}else
+		{
+			demle++;
+		}
+		n/=10;
+	}
+		if(demle>demch)
+		{
+			printf("YES\n");
+		}else
+		{
+			printf("NO\n");
+		}
+}
+	return 0;
+}
