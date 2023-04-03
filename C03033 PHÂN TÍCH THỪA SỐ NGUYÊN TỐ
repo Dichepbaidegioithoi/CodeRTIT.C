@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	int test;
+	scanf("%d", &test);
+	while(test--)
+	{
+		int n,check=0;
+		scanf("%d", &n);
+		printf("%d = ",n);
+		for(int i=2;i<=sqrt(n);i++)
+		{
+			int mu=0;
+			while(n%i==0)
+			{ mu++;
+			n=n/i;
+			}
+			if(mu>0)
+			{
+				if(check==1)
+					printf(" * ");
+				
+				printf("%d^%d",i,mu);
+			
+				if(check==0)
+				check=1;
+			}
+		}
+		if(n>1)
+		{
+			if(check)    printf(" * ");
+			printf("%d^%d",n,1);
+		}
+		printf("\n");
+	}
+	return 0;
+	
+}
