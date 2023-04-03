@@ -1,0 +1,41 @@
+#include <stdio.h>
+int tong(int n)
+{
+    int s1=0;   
+    while(n>0)
+    {
+        s1+=n%10;
+        n/=10;
+    }
+    return s1;
+}
+int tongnt(int n)
+{
+	int mu=0;
+	for(int i=2;i<=sqrt(n);i++)
+	{
+		while(n%i==0)
+		{ 
+		    mu+=tong(i);
+		    n=n/i;
+		}
+	}
+		if(n>1)
+		{
+            mu+=tong(n);
+		}
+		return mu;
+}
+int main()
+{
+	int n;
+	scanf("%d", &n);
+	if(tong(n)==tongnt(n))
+	{
+		printf("YES\n");
+	}else
+	{
+		printf("NO\n");
+	}
+	return 0;
+}
