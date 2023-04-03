@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	int test;
+	scanf("%d", &test);
+	while(test--)
+	{
+	char a[18];
+	scanf("%s", &a);
+	int check=0;
+	for(int i=0;i<=strlen(a)-1;i++)
+	{
+		if((a[i]-'0')%2!=0)
+		{
+			check=1;
+			printf("NO\n");
+			break;
+	}
+}
+	if(check==0)
+	{
+		printf("YES\n");
+	}
+}
+	return 0;
+}
