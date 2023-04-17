@@ -1,0 +1,52 @@
+// int : %d
+// long long : %lld
+// float :%f
+// double :%lf
+// char : %c
+ 
+ // printf
+ // scanf
+ #include <stdio.h>
+ #include <string.h>
+ #include <stdlib.h>
+ #include <ctype.h>
+ #include <math.h>
+int main(){
+	int t;
+	scanf("%d",&t);
+	for(int k=1;k<=t;k++){
+	int n;
+	int m;int x;
+	scanf("%d %d %d",&n,&m,&x);
+	int a[1000];
+	int b[1000];
+	for(int i=0;i<n;i++){
+		scanf("%d",&a[i]);
+	}
+	for(int i=0;i<m;i++){
+		scanf("%d",&b[i]);
+	}
+	int c[1000];
+	int cnt=0;
+	for(int i=0;i<n+m;i++){
+		if(i<x){
+			c[i]=a[i];
+			cnt++;
+		}
+		else if(i>=cnt+m){
+			c[i]=a[i-m];
+			
+		}
+		else{
+			c[i]=b[i-x];
+		}
+		}
+		printf("Test %d:\n",k);
+	for(int i=0;i<n+m;i++){
+		printf("%d ",c[i]);
+	}
+	printf("\n");
+}
+	return 0;
+}
+	
