@@ -1,0 +1,23 @@
+#include <stdio.h> 
+#include <string.h> 
+#include <stdlib.h> 
+int main(void) { 
+    int t, dem, i; 
+    scanf("%d", &t); 
+    getchar();
+    while (t--) { 
+        char a[200]; 
+        fgets(a, 200, stdin); 
+        a[strlen(a) - 1] = ' '; 
+        char *token = strtok(a, " "); 
+        dem = 0;
+        while (token != NULL) {
+            dem++;
+            token = strtok(NULL, " "); 
+            if (token == "\n") 
+            *token = ' '; 
+            } 
+            printf("%d\n", dem); 
+        }
+        return 0;
+        }
