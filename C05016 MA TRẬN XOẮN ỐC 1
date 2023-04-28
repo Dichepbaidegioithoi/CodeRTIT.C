@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+int isReversible(long long n) { 
+long long m = n, d = 0;
+ while (m != 0) {
+  d = d * 10 + m % 10;
+   m /= 10; }
+    return (d == n); } 
+int odd(long long n) 
+	{ int donvi;
+	 while (n != 0) { 
+	 donvi = n % 10; n /= 10; 
+	 if (donvi % 2 == 0) { return 0;
+	  } }
+	   return 1; } 
+	  int sumOdd(long long n) {
+	   int sum = 0; 
+	   while (n != 0) { 
+	   sum += n % 10;
+	    n /= 10;
+		 } 
+		 if(sum % 2 != 0)
+		  return 1;
+		   else return 0;
+		    }
+	 int main() { 
+	 int t; 
+	 scanf("%d", &t); 
+	 while (t--) { 
+	 long long n; 
+	 scanf("%lld", &n); 
+	 if(isReversible(n) && odd(n) && sumOdd(n)) { 
+	 printf("YES\n"); } 
+	 else printf("NO\n"); } 
+	 return 0; 
+	 }
