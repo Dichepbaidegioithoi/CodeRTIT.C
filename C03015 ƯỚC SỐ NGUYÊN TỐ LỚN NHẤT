@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<math.h>
+ void pt(long long n){
+  long long max=0,max1=0, max2=0;
+   for(int i=2; i<=sqrt(n); i++){ 
+   if(n%i==0){ 
+   while(n%i==0){   //while cu lap 
+    n/=i; // chia den khi nao so do khong chia het cho i duoc nua 
+	}
+	 max1=i;
+	}
+	}
+	 if(n!=1){ // vi phong for khong chay i=1 nen se bi bo quen gia tri n
+	 max2=n; 
+	 }
+	  if(max2>max1){ 
+	  max=max2; 
+	  } else 
+	  max=max1;
+	   printf("%lld", max); } 
+	   int main(){ 
+	   int t;
+	    scanf("%d", &t);
+		 while(t--){ 
+		 long long n;
+		  scanf("%lld", &n); 
+		  pt(n); 
+		  printf("\n"); } }
+
